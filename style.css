@@ -1,0 +1,19 @@
+.body{
+    background-color: #FFDA29;
+}
+
+.texto-inical{
+    padding: 40px;
+    text-align: left;
+    font-size: large;
+}
+
+.container{
+    width: 30%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#imagem{
+    width: 30%;
+}

@@ -1,19 +1,35 @@
-.body{
-    background-color: #FFDA29;
+*{
+    background: #FFDA29;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-1{
+    margin-left: 85px;
+    text-align: left;
+    font-weight: bolder;
+    width: 100%;
 }
 
 .texto-inical{
     padding: 40px;
+    display: inline-block;
+    margin-left: 50px;
     text-align: left;
     font-size: large;
 }
 
 .container{
-    width: 30%;
-    padding-right: 10px;
-    padding-left: 10px;
+    color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
-#imagem{
+#logo{
+    display: inline-block;
+    margin-right: 100px;
+    margin-bottom: -200px;
+    margin-top: -380px;
     width: 30%;
 }

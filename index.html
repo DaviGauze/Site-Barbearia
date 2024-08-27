@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbearia Estilo Único</title>
     <link rel="shortcut icon" href="assets/Logo/Logo.jpg" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
         body {
             background-color: #FFDA29;
             color: black;
             scroll-behavior: smooth;
+        }
+        #titulo{
+            font-weight: bolder;
         }
         .navbar, .section-title {
             background-color: #FFDA29;
@@ -24,10 +31,101 @@
         .media-body {
             color: black;
         }
-
-        .mr-3{
-            width:10%;
+        .whatsapp-btn {
+            background-color: black;
+            color: yellow;
+            border: none;
         }
+
+        .whatsapp-btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .card {
+            padding: 10px;
+            background-color: #0052a4;
+            border-radius: 5px;
+        }
+
+        /* Inicio CSS Carrossel */
+        .carousel-item img {
+            width: 100%; 
+            height: auto; 
+            max-height: 700px; 
+            object-fit: cover; 
+        }
+
+        .carousel-item {
+            min-height: 300px; 
+        }
+
+        .btn-custom {
+            background-color: #000000; 
+            color: #FFD700; 
+            border: none;
+        }
+        /* Solicitar Orçamento Carrossel */
+        .btn-custom:hover {
+            background-color: #333333; 
+            color: #FFD700;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+        /* Fim CSS Carrossel */
+
+
+        /* Inicio CSS Depoimentos */
+        #depoimentos {
+            margin-top: 50px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px;
+        }
+
+        .card-img-left {
+            width: 150px; 
+            height: auto; 
+            border-radius: 10px 0 0 10px; 
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            padding: 20px;
+        }
+
+        .autor-depoimento {
+            margin-top: 10px;
+            color: #555; 
+            font-size: 0.9em; 
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column; 
+                text-align: center; 
+            }
+            
+            .card-img-left {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .card-body {
+                padding: 15px; 
+            }
+        }
+        /* Fim CSS Depoimentos */
+
         .card {
             background-color: #FFDA29;
             color: black;
@@ -62,6 +160,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#blog">Blog</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -71,20 +172,45 @@
 <section class="container" id="sobre">
     <div class="row">
         <div class="col-md-6">
-            <h1>Sobre Nós</h1>
+            <h1 id="titulo">Sobre Nós</h1>
             <p>A Barbearia Estilo Único foi fundada em 2010 por João Silva, um barbeiro apaixonado por sua arte e com o sonho de criar um espaço onde os homens pudessem cuidar de sua aparência de forma personalizada e com estilo. Com mais de uma década de experiência no mercado, a barbearia se consolidou como referência em cortes de cabelo e barba, atendendo clientes de todas as idades com um serviço de alta qualidade.</p>
             <p>Nossa missão é oferecer aos nossos clientes uma experiência única em cuidados masculinos, combinando tradição e modernidade em um ambiente acolhedor e profissional. Acreditamos que cada cliente é único e merece um atendimento personalizado que reflita seu estilo e personalidade.</p>
+            <br>
+            <p> <strong>Missão:</strong> Proporcionar aos clientes uma experiência excepcional em cuidados masculinos, com serviços de alta qualidade e um atendimento personalizado.</p>
+            <p> <strong>Visão:</strong> Ser a barbearia mais reconhecida em São Paulo por sua excelência em serviços e atendimento ao cliente.</p>
+            <p> <strong>Valores:</strong> Qualidade, atendimento personalizado, respeito ao cliente, inovação, e compromisso com a satisfação do cliente.</p>
         </div>
         <div class="col-md-6">
             <img src="assets/Logo/Logo.jpg" alt="Logo da Barbearia Estilo Único" class="img-fluid">
         </div>
     </div>
+
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d887.9973789005938!2d-52.61621673035478!3d-27.093626498533723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e4b69d571bcb3f%3A0x6a99373b959d106b!2sMit%20Store%20Club%20Chapec%C3%B3!5e0!3m2!1sen!2sbr!4v1724773197087!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex flex-column">
+            <div class="p-3 bg-light rounded shadow-sm">
+                <h5 class="mb-3"><b>Endereço:</b></h5>
+                <p> Rua dos Barbeiros, 123, Bairro Estilo <br> Chapecó, SC<br>CEP: 01234-567</p>
+                <h5 class="mb-3"><b>Telefone:</b></h5>
+                <p>(49) 9 9990-6409</p>
+            </div>
+            <!-- Botão WhatsApp -->
+            <div class="text-center mt-4" id="wpp">
+                <a href="https://wa.me/5549999906409" class="btn whatsapp-btn" target="_blank">Entre em Contato pelo WhatsApp</a>
+            </div>
+        </div>
+    </div>
 </section>
+
 
 <!-- Nossos Profissionais -->
 <section class="container" id="profissionais">
     <div class="section-title">
-        <h2>Nossos Profissionais</h2>
+        <h2 id="titulo">Nossos Profissionais</h2>
     </div>
     <div class="row">
         <!-- João Silva -->
@@ -92,7 +218,7 @@
             <div class="card">
                 <img src="assets/Barbeiros/João Silva.jpg" class="card-img-top" alt="João Silva">
                 <div class="card-body">
-                    <h5 class="card-title">João Silva</h5>
+                    <h5 class="card-title" id="titulo">João Silva</h5>
                     <p class="card-text">Fundador e Master Barber. Com mais de 15 anos de experiência, João é especialista em cortes clássicos e modernos.</p>
                 </div>
             </div>
@@ -102,7 +228,7 @@
             <div class="card">
                 <img src="assets/Barbeiros/Pedro%20Oliveira.jpg" class="card-img-top" alt="Pedro Oliveira">
                 <div class="card-body">
-                    <h5 class="card-title">Pedro Oliveira</h5>
+                    <h5 class="card-title" id="titulo">Pedro Oliveira</h5>
                     <p class="card-text">Barbeiro Sênior. Pedro possui 10 anos de experiência e é conhecido por sua precisão em barbas e cortes degradê.</p>
                 </div>
             </div>
@@ -112,7 +238,7 @@
             <div class="card">
                 <img src="assets/Barbeiros/Lucas%20Martins.jpg" class="card-img-top" alt="Lucas Martins">
                 <div class="card-body">
-                    <h5 class="card-title">Lucas Martins</h5>
+                    <h5 class="card-title" id="titulo">Lucas Martins</h5>
                     <p class="card-text">Barbeiro. Lucas está na equipe há 5 anos e é especialista em cortes infantis e penteados estilizados.</p>
                 </div>
             </div>
@@ -120,87 +246,141 @@
     </div>
 </section>
 
-<!-- Serviços -->
-<section class="container" id="servicos">
-    <div class="section-title">
-        <h2>Serviços</h2>
-        <p>Na Barbearia Estilo Único, oferecemos uma variedade de serviços pensados para atender às necessidades e preferências de nossos clientes.</p>
-    </div>
-    <div class="row">
-        <!-- Corte Tradicional -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="assets/Serviços/Corte Tradicional.jpg" class="card-img-top" alt="Corte de Cabelo Tradicional">
-                <div class="card-body">
-                    <h5 class="card-title">Corte de Cabelo Tradicional</h5>
-                    <p class="card-text">Um corte clássico com técnicas tradicionais, perfeito para quem busca um visual elegante e atemporal.</p>
+    <!-- Carrossel de Serviços -->
+    <section class="container" id="servicos">
+        <div class="section-title">
+            <h2 id="titulo">Serviços</h2>
+            <p>Na Barbearia Estilo Único, oferecemos uma variedade de serviços pensados para atender às necessidades e preferências de nossos clientes.</p>
+        </div>
+    
+        <!-- Carrossel de Serviços -->
+        <div id="servicosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="card">
+                        <img src="assets/Serviços/Corte Tradicional.jpg" class="card-img-top" alt="Corte de Cabelo Tradicional">
+                        <div class="card-body">
+                            <h5 class="card-title">Corte de Cabelo Tradicional</h5>
+                            <p class="card-text">Um corte clássico com técnicas tradicionais, perfeito para quem busca um visual elegante e atemporal.</p>
+                            <p class="card-price">Preço: R$ 60,00</p>
+                            <a href="corte-tradicional.html" class="btn btn-custom">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="card">
+                        <img src="assets/Serviços/barba completa.jpg" class="card-img-top" alt="Barba Completa">
+                        <div class="card-body">
+                            <h5 class="card-title">Barba Completa</h5>
+                            <p class="card-text">Serviço completo de modelagem e aparo de barba, utilizando técnicas de precisão para um resultado perfeito.</p>
+                            <p class="card-price">Preço: R$ 40,00</p>
+                            <a href="barba-completa.html" class="btn btn-custom">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="card">
+                        <img src="assets/Serviços/corte de cabelo infantil.jpg" class="card-img-top" alt="Corte Infantil">
+                        <div class="card-body">
+                            <h5 class="card-title">Corte Infantil</h5>
+                            <p class="card-text">Um corte especial para os pequenos, com todo o cuidado e paciência que as crianças merecem.</p>
+                            <p class="card-price">Preço: R$ 50,00</p>
+                            <a href="corte-infantil.html" class="btn btn-custom">Solicitar Orçamento</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#servicosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#servicosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <!-- Barba Completa -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="assets/Serviços/barba completa.jpg" class="card-img-top" alt="Barba Completa">
-                <div class="card-body">
-                    <h5 class="card-title">Barba Completa</h5>
-                    <p class="card-text">Serviço completo de modelagem e aparo de barba, utilizando técnicas de precisão para um resultado perfeito.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Corte Infantil -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="assets/Serviços/corte de cabelo infantil.jpg" class="card-img-top" alt="Corte Infantil">
-                <div class="card-body">
-                    <h5 class="card-title">Corte Infantil</h5>
-                    <p class="card-text">Um corte especial para os pequenos, com todo o cuidado e paciência que as crianças merecem.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+    
+
 
 <!-- Depoimentos -->
 <section class="container" id="depoimentos">
     <div class="section-title">
-        <h2>Depoimentos</h2>
+        <h2 id="titulo">Depoimentos</h2>
         <p>Ao longo dos anos, a Barbearia Estilo Único conquistou a confiança de uma vasta clientela, que sempre retorna pelo atendimento de qualidade e pelos resultados incríveis.</p>
     </div>
     <div class="row">
         <!-- Depoimento 1 -->
-        <div class="col-md-12 mb-4">
-            <div class="media">
-                <img src="assets/Clientes/Carlos Mendes.jpg" class="mr-3" alt="Carlos Mendes">
-                <div class="media-body">
-                    <p>"A melhor barbearia que já frequentei. Profissionais extremamente qualificados e ambiente muito agradável." - <strong>Carlos Mendes</strong>, 15/03/2024.</p>
+        <div class="col-md-12 col-lg-6 mb-4">
+            <div class="card flex-md-row">
+                <img src="assets/Clientes/Carlos Mendes.jpg" class="card-img-left depoimento-img" alt="Carlos Mendes">
+                <div class="card-body">
+                    <p class="card-text">"A melhor barbearia que já frequentei. Profissionais extremamente qualificados e ambiente muito agradável."</p>
+                    <p class="autor-depoimento"><strong>Carlos Mendes</strong><br>15/03/2024</p>
                 </div>
             </div>
         </div>
         <!-- Depoimento 2 -->
-        <div class="col-md-12 mb-4">
-            <div class="media">
-                <img src="assets/Clientes/Rafael%20Lima.jpg" class="mr-3" alt="Foto de Rafael Lima">
-                <div class="media-body">
-                    <p>"O corte e a barba sempre saem perfeitos, exatamente como eu gosto. Recomendo para todos os meus amigos." - <strong>Rafael Lima</strong>, 22/04/2024.</p>
+        <div class="col-md-12 col-lg-6 mb-4">
+            <div class="card flex-md-row">
+                <img src="assets/Clientes/Rafael Lima.jpg" class="card-img-left depoimento-img" alt="Rafael Lima">
+                <div class="card-body">
+                    <p class="card-text">"O corte e a barba sempre saem perfeitos, exatamente como eu gosto. Recomendo para todos os meus amigos."</p>
+                    <p class="autor-depoimento"><strong>Rafael Lima</strong><br>22/04/2024</p>
                 </div>
             </div>
         </div>
         <!-- Depoimento 3 -->
-        <div class="col-md-12 mb-4">
-            <div class="media">
-                <img src="assets/Clientes/Mariana%20Silva.jpg" class="mr-3" alt="Foto de Mariana Silva">
-                <div class="media-body">
-                    <p>"Levo meu filho para cortar o cabelo aqui desde os 3 anos. Eles são ótimos com crianças!" - <strong>Mariana Silva</strong>, 05/05/2024.</p>
+        <div class="col-md-12 col-lg-6 mb-4">
+            <div class="card flex-md-row">
+                <img src="assets/Clientes/Mariana Silva.jpg" class="card-img-left depoimento-img" alt="Mariana Silva">
+                <div class="card-body">
+                    <p class="card-text">"Levo meu filho para cortar o cabelo aqui desde os 3 anos. Eles são ótimos com crianças!"</p>
+                    <p class="autor-depoimento"><strong>Mariana Silva</strong><br>05/05/2024</p>
                 </div>
             </div>
         </div>
+        <!-- Depoimento 4 -->
+        <div class="col-md-12 col-lg-6 mb-4">
+            <div class="card flex-md-row">
+                <img src="assets/Clientes/João Pereira.jpg" class="card-img-left depoimento-img" alt="João Pereira">
+                <div class="card-body">
+                    <p class="card-text">"Ambiente acolhedor e impecável, o pessoal tem um cuidado excepcional nos detalhes."</p>
+                    <p class="autor-depoimento"><strong>João Pereira</strong><br>10/07/2024</p>
+                </div>
+            </div>
+        </div>
+        <!-- Depoimento 5 -->
+        <div class="col-md-12 col-lg-6 mb-4">
+            <div class="card flex-md-row">
+                <img src="assets/Clientes/Guilherme Santos.jpg" class="card-img-left depoimento-img" alt="Sofia Almeida">
+                <div class="card-body">
+                    <p class="card-text">"Os serviços são incríveis e o pessoal sempre tem um sorriso no rosto. Me sinto em casa aqui."</p>
+                    <p class="autor-depoimento"><strong>Guilherme Santos</strong><br>20/08/2024</p>
+                </div>
+            </div>
+        </div>
+        <!-- Depoimento 6 -->
+        <div class="col-md-12 col-lg-6 mb-4">
+            <div class="card flex-md-row">
+                <img src="assets/Clientes/Lucas Santana.jpg" class="card-img-left depoimento-img" alt="Lucas Santana">
+                <div class="card-body">
+                    <p class="card-text">"A dedicação e o profissionalismo são notáveis. Cada visita é uma experiência memorável."</p>
+                    <p class="autor-depoimento"><strong>Lucas Santana</strong><br>15/09/2024</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
 <!-- Blog -->
 <section class="container" id="blog">
     <div class="section-title">
-        <h2>Blog</h2>
+        <h2 id="titulo">Blog</h2>
         <p>Conheça nosso Blog.</p>
     </div>
     <div class="row">
@@ -209,7 +389,7 @@
             <div class="card">
                 <img src="assets/Blog/1.jpg" class="card-img-top" alt="Tendências de Cortes Masculinos para 2024">
                 <div class="card-body">
-                    <h5 class="card-title">Tendências de Cortes Masculinos para 2024</h5>
+                    <h5 class="card-title" id="titulo">Tendências de Cortes Masculinos para 2024</h5>
                     <p class="card-text">Descubra as últimas tendências de cortes masculinos para o ano de 2024. Desde cortes clássicos até estilos mais ousados, conheça o que está em alta e inspire-se para renovar o visual.</p>
                     <p class="card-text"><small class="text-muted">Autor: João Silva</small></p>
                 </div>
@@ -220,7 +400,7 @@
             <div class="card">
                 <img src="assets/Blog/2.jpg" class="card-img-top" alt="Cuidados Essenciais para uma Barba Perfeita">
                 <div class="card-body">
-                    <h5 class="card-title">Cuidados Essenciais para uma Barba Perfeita</h5>
+                    <h5 class="card-title" id="titulo">Cuidados Essenciais para uma Barba Perfeita</h5>
                     <p class="card-text">Manter a barba sempre bem cuidada requer alguns cuidados essenciais. Neste artigo, falamos sobre produtos, técnicas e dicas para manter a barba impecável.</p>
                     <p class="card-text"><small class="text-muted">Autor: Pedro Oliveira</small></p>
                 </div>
@@ -228,6 +408,51 @@
         </div>
     </div>
 </section>
+
+<!-- Contato -->
+<section>
+    <div class="container" id="contato">
+        <h1 class="section-title" id="titulo">Entre em contato conosco!</h1>
+        <p>Como nos encontrar</p>
+        <div class="row mt-5">
+            <!-- Formulário -->
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group mb-3">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Seu email" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Informações -->
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h3 class="mb-3"><b>Barbearia Estilo Único:</b></h3>
+                    <p> <b>Email:</b> contato@estilounico.com.br</p>
+                    <p><b>Telefone:</b> (49) 9 9990-6409</p>
+                    <p><b>WhatsApp:</b> (49) 9 9990-6409</p>
+
+                    <!-- Links das Redes Sociais -->
+                    <h6 class="mt-4">Siga-nos nas redes sociais:</h6>
+                    <a href="https://www.facebook.com/davigauze/" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/davigauze/" target="_blank">Instagram</a> |
+                    <a href="https://www.linkedin.com/in/davi-andr%C3%A9-gauze-3740b4251/" target="_blank">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -8,6 +8,7 @@ body {
     font-weight: bolder;
 }
 
+/* Header */
 .navbar, .section-title {
     background-color: #FFDA29;
 }
@@ -24,6 +25,7 @@ body {
     color: black;
 }
 
+/* Botão Whatsapp */
 .whatsapp-btn {
     background-color: black;
     color: yellow;
@@ -35,18 +37,11 @@ body {
     color: #fff;
 }
 
+/* Carrossel Serviços */
 .card-carrossel {
     padding: 10px;
     background-color: #0052a4;
     border-radius: 5px;
-}
-
-.card-depoimento {
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #FFDA29;
-    color: black;
 }
 
 .carousel-item img {
@@ -58,6 +53,7 @@ body {
 
 .carousel-item {
     min-height: 300px;
+    border: #0052a4;
 }
 
 .btn-custom {
@@ -77,8 +73,17 @@ body {
     border-radius: 50%;
 }
 
+/* Depoimentos */
 #depoimentos {
     margin-top: 50px;
+}
+
+.card-depoimento {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #FFDA29;
+    color: black;
 }
 
 .card-img-left {
@@ -127,4 +132,88 @@ body {
 
 section {
     padding: 60px 0;
+}
+
+/* Formulário */
+form {
+    background-color: #FFDA29; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos do formulário */
+.form-control {
+    border: 1px solid #ced4da; 
+    border-radius: 4px; 
+    padding: 10px; 
+    font-size: 16px;
+    transition: border-color 0.3s ease; 
+}
+
+.form-control:focus {
+    border-color: #000000; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); 
+}
+
+/* Botão de envio */
+.btn-primary {
+    background-color: #000000; 
+    border-color: #707070; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.btn-primary:hover {
+    background-color: #37383a; 
+    border-color: #707070;
+}
+
+/* Informações de contato */
+.contact-info {
+    background-color: #FFDA29; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    height: auto;
+}
+
+.contact-info h3 {
+    font-size: 24px; 
+    color: #000000; 
+}
+
+.contact-info p {
+    font-size: 16px; 
+    color: #000000; 
+}
+
+/* Redes Sociais */
+.contact-info a {
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.contact-info a:hover {
+    color: #000000; 
+    text-decoration: none;
+}
+
+.redes-sociais {
+    width: 48px;
+    padding: 5px;
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+/* Footer */ 
+.footer {
+    margin-top: 40px;
+    background-color: #333;
+    color: #FFDA29;
+    padding: 10px;
+    text-align: center;
 }

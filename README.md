@@ -57,24 +57,11 @@ Abaixo está a estrutura do projeto para o site da Barbearia Estilo Único. Esta
 
 - **`assets/`**: Contém recursos gerais do site, como imagens e ícones.
     - **`Barbeiros/`**: Contém fotos de todos os "barbeiros" da barbearia.
-    - **`Blog/`**: Subdiretórios ou arquivos contendo postagens e informações do blog.
-    - **`Clientes/`**: Arquivos com depoimentos e feedback de clientes.
-  
-  - **`Logo/`**: Diretório com imagens do logo da barbearia.
-  - **`Redes Sociais/`**: Diretório com ícones e imagens das redes sociais.
-  - **`Barbeiros/`**: Contém fotos de todos os "barbeiros" da barbearia.
-
-
-  - `barba-completa.html`: Página com informações sobre o serviço de barba completa.
-  - `corte-infantil.html`: Página com informações sobre o corte infantil.
-  - `corte-tradicional.html`: Página com informações sobre o corte tradicional.
-
-
-- **`Clientes/`**: Contém informações e depoimentos de clientes.
-  - **`[arquivos de clientes]`**: Arquivos com depoimentos e feedback de clientes.
-
-- **`Serviços/`**: Contém informações detalhadas sobre os serviços oferecidos pela barbearia.
-  - **`[arquivos dos serviços]`**: Arquivos com detalhes e descrições dos serviços.
+    - **`Blog/`**: Contém fotos de todas as capas dos posts dos blogs.
+    - **`Clientes/`**: Foto de todos os "Clientes".
+    - **`Logo/`**: Diretório com imagens do logo da barbearia.
+    - **`Redes Sociais/`**: Diretório com ícones e imagens das redes sociais.
+    - **`Serviços/`**: Contém imagens variadas de todos os serviços.
 
 - **`styles/`**: Diretório para arquivos de estilo CSS.
   - `barba-completa.css`: Estilos específicos para a página de barba completa.
@@ -83,10 +70,11 @@ Abaixo está a estrutura do projeto para o site da Barbearia Estilo Único. Esta
   - `style.css`: Estilo geral do site, aplicado em todas as páginas.
 
 - **`index.html`**: Página inicial do site.
+- `barba-completa.html`: Página com informações sobre o serviço de barba completa.
+- `corte-infantil.html`: Página com informações sobre o corte infantil.
+- `corte-tradicional.html`: Página com informações sobre o corte tradicional.
 
 - **`README.md`**: Arquivo de documentação que contém informações sobre o projeto, instruções de instalação e contribuição.
-
-Esta estrutura ajuda a manter o projeto organizado e facilita a navegação e a compreensão dos arquivos para colaboradores e desenvolvedores.
 
 
 ## Contribuição
